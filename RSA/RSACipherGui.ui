@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RSA Cipher</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#Dialog {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+
+QCheckBox {
+	color: rgb(240, 240, 240);
+	font-size: 13px;
+}
+
+QCheckBox::indicator {
+	width: 11px;
+	height: 11px;
+	border-radius: 5px;
+}
+
+QCheckBox::indicator::unchecked{ 
+	border: 1px solid; 
+	border-color: rgb(150, 0, 0);
+	border-radius: 1px;
+	background-color: rgba(28, 29, 36, 235); 
+	width: 11px; 
+	height: 11px; 
+}
+
+QCheckBox::indicator::checked{ 
+	border: 1px solid; 
+	border-color: rgb(130, 0, 0);
+	border-radius: 1px;
+	background-color: rgb(150, 0, 0);
+	width: 11px; 
+	height: 11px; 
+}
+
+
+
+
+QRadioButton {
+	color: rgb(150, 150, 150);
+	font-size: 13px;
+}
+
+QRadioButton::indicator {
+	width: 11px;
+	height: 11px;
+	border-radius: 5px;
+}
+
+QRadioButton::indicator::unchecked{ 
+	border: 1px solid; 
+	border-color: rgb(75, 0, 0);
+	border-radius: 2px;
+	background-color: rgba(28, 29, 36, 235); 
+	width: 11px; 
+	height: 11px; 
+}
+
+QRadioButton::indicator::checked{ 
+	border: 4px solid; 
+	border-color: rgb(75, 0, 0);
+	border-radius: 3px;
+	background-color: rgba(28, 29, 36, 235); 
+	width: 6px; 
+	height: 6px; 
+}
+
+QWidget#bgwidget {
+	background-color: rgba(28, 29, 36, 235);
+	border: 1px solid rgb(55, 55, 60);
+	border-bottom-left-radius: 8px;/**/
+	border-bottom-right-radius: 8px;/**/
+}
+
+QWidget#title_bar {
+	background-color: rgb(48, 49, 56);
+	border: 1px solid rgb(55, 55, 60);
+	border-bottom: 2px solid rgb(55, 55, 60);
+	border-top-left-radius: 8px;/**/
+}
+
+QTextEdit {
+	selection-color: rgb(250, 250, 250);
+	selection-background-color: rgb(150, 0, 0);
+}
+
+QTableView {
+	background-color: rgba(28, 29, 36, 180);
+	color: white;
+	border: none;
+}
+
+QHeaderView {
+	background-color: rgba(28, 29, 36, 220);
+}
+
+QHeaderView::section {
+	background-color:  rgba(28, 29, 36, 220);
+	color: #aaa;
+	border: 1px solid rgb(37, 39, 48);
+}
+
+QTableView QTableCornerButton::section {
+    background-color: rgba(28, 29, 36, 220);
+	border: 1px solid rgb(37, 39, 48);
+}
+
+QTableWidget::item::selected, QTableWidget QLineEdit { 
+	/*background-color: rgb(45, 46, 52); */
+	background-color: rgba(28, 29, 36, 180);
+	color: white; 
+	border: 3px solid rgb(37, 39, 48); 
+	border-radius: 3px;
+}
+
+
+
+QTableWidget::item
+{
+    color: white;/*
+    background-color: rgba(28, 29, 36, 100);*/
+    text-align:center;
+	border: 1px solid rgb(28, 26, 36);
+}
+
+
+
+
+
+
+
+QToolTip {
+	background-color: rgb(34, 36, 44);
+	border: 1px solid rgb(37, 39, 48);
+	color: #aaa;
+}
+
+
+/*HORIZONTAL SCROLLBAR*/
+QScrollBar:horizontal {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	height: 10px;
+	margin: 0 5px 0 5px;
+	border-radius: 0px;
+}
+
+/*HANDLE BAR HORIZONTAL*/
+QScrollBar::handle:horizontal {
+	background-color: rgb(150, 0, 0);
+	min-width: 30px;
+	border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+	background-color: rgb(170, 0, 0);
+}
+
+QScrollBar::handle:horizontal:pressed {
+	background-color: rgb(140, 0, 0);
+}
+
+
+
+
+
+
+
+
+/*BTN LEFT, RIGHT - SCROLLBAR*/
+QScrollBar::sub-line:horizontal, QScrollBar::add-line:horizontal {
+	width: 0px;
+	border: none;
+}
+
+/*RESET ARROW*/
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+	background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+	background: none;
+}
+
+
+
+
+
+/*VERTICAL SCROLLBAR*/
+QScrollBar:vertical {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	width: 10px;
+	margin: 5px 0 5px 0;
+	border-radius: 0px;
+}
+
+/*HANDLE BAR VERTICAL*/
+QScrollBar::handle:vertical {
+	background-color: rgb(150, 0, 0);
+	min-height: 30px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(170, 0, 0);
+}
+
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(140, 0, 0);
+}
+
+/*BTN TOP, BOTTOM - SCROLLBAR*/
+QScrollBar::sub-line:vertical, QScrollBar::add-line:vertical  {
+	height: 0px;
+	border: none;
+}
+
+
+/*RESET ARROW*/
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="bgwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>33</y>
+     <width>1050</width>
+     <height>685</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="lbl_main">
+    <property name="geometry">
+     <rect>
+      <x>399</x>
+      <y>27</y>
+      <width>271</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>29</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>true</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>RSA CIPHER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_enc">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>586</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(150, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(206, 214, 196);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+	border-radius: 12.4px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_enc_cp">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>586</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(150, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(206, 214, 196);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icon.png</normaloff>icon.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_enc_cp">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>616</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgba(255, 255, 255, 255)
+}</string>
+    </property>
+    <property name="text">
+     <string>Result copied!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dec">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>586</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(85, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(150, 160, 140);
+	border-left: 2px solid rgb(70, 0, 0);
+	border-right: 1px solid rgb(70, 0, 0);
+	border-bottom: 2px solid rgb(70, 0, 0);
+	border-radius: 12.4px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dec_cp">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>825</x>
+      <y>586</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(85, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(150, 160, 140);
+	border-left: 2px solid rgb(70, 0, 0);
+	border-right: 1px solid rgb(70, 0, 0);
+	border-bottom: 2px solid rgb(70, 0, 0);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icon.png</normaloff>icon.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_dec_cp">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>616</y>
+      <width>81</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgba(255, 255, 255, 255)
+}</string>
+    </property>
+    <property name="text">
+     <string>Result copied!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_enc">
+    <property name="geometry">
+     <rect>
+      <x>71</x>
+      <y>97</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_dec">
+    <property name="geometry">
+     <rect>
+      <x>756</x>
+      <y>97</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="OTInput">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>137</y>
+      <width>225</width>
+      <height>115</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(34, 36, 44, 225);
+}
+
+QTextEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+
+QTextEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgba(43, 45, 56, 235);
+}</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="tabStopWidth">
+     <number>80</number>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>OpenText Input</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="CTInput">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>137</y>
+      <width>225</width>
+      <height>115</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	border: 2px solid rgba(30, 32, 40, 200);
+	border-radius: 20px;
+	color: #828282;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(22, 24, 32, 125);
+}
+
+QTextEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+
+QTextEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgba(43, 45, 56, 235);
+}</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>CipherText Input</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_publkey">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>145</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>Public Key</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_enc_nkey">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>262</y>
+      <width>225</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	background-color: rgba(34, 36, 44, 225);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(200, 200, 200);
+}
+
+
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;N Key: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_enc_res">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>457</y>
+      <width>225</width>
+      <height>115</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	background-color: rgba(34, 36, 44, 225);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #FFF;
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_dec_res">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>457</y>
+      <width>225</width>
+      <height>115</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgba(30, 32, 40, 200);
+	border-radius: 20px;
+	background-color: rgba(22, 24, 32, 125);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #828282;
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_enc_res">
+    <property name="geometry">
+     <rect>
+      <x>235</x>
+      <y>586</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(150, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(206, 214, 196);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>reset_icon.png</normaloff>reset_icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dec_res">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>586</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(85, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(150, 160, 140);
+	border-left: 2px solid rgb(70, 0, 0);
+	border-right: 1px solid rgb(70, 0, 0);
+	border-bottom: 2px solid rgb(70, 0, 0);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>reset_icon.png</normaloff>reset_icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="publ_key_input">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>170</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(34, 36, 44, 225);
+}
+
+QTextEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+
+QTextEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgba(43, 45, 56, 235);
+}</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="tabStopWidth">
+     <number>80</number>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Public Key Input</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="priv_key_input">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>170</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(34, 36, 44, 225);
+}
+
+QTextEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+
+QTextEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgba(43, 45, 56, 235);
+}</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="tabStopWidth">
+     <number>80</number>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Private Key Input</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_privkey">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>145</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>Private Key</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="n_key_input">
+    <property name="geometry">
+     <rect>
+      <x>425</x>
+      <y>240</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(34, 36, 44, 225);
+}
+
+QTextEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+
+QTextEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgba(43, 45, 56, 235);
+}</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="tabStopWidth">
+     <number>80</number>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>N Key Input</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>292</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Custom Key Input</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_enc_publkey">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>327</y>
+      <width>225</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	background-color: rgba(34, 36, 44, 225);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Public Key: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_enc_privkey">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>392</y>
+      <width>225</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	background-color: rgba(34, 36, 44, 225);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Private Key: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_dec_nkey">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>284</y>
+      <width>225</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgba(30, 32, 40, 200);
+	border-radius: 20px;
+	background-color: rgba(22, 24, 32, 125);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(90, 90, 90);
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;N Key: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="lbl_dec_privkey">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>371</y>
+      <width>225</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+	border: 2px solid rgba(30, 32, 40, 200);
+	border-radius: 20px;
+	background-color: rgba(22, 24, 32, 125);
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color:  rgb(90, 90, 90);
+}
+</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Private Key: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_nkey">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>220</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(68, 70, 82);
+}</string>
+    </property>
+    <property name="text">
+     <string>N Key</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_enc_cp_to">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>342</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(150, 0, 0);
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: rgb(206, 214, 196);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border-left: 2px solid rgb(130, 0, 0);
+	border-right: 1px solid rgb(130, 0, 0);
+	border-bottom: 2px solid rgb(130, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(140, 0, 0);
+	border-left: 1px solid rgb(130, 0, 0);
+	border-right: 2px solid rgb(130, 0, 0);
+	border-top: 2px solid rgb(130, 0, 0);
+	padding-top: -5px;
+	padding-bottom: -5px;
+	padding-left: 5px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>move_icon.png</normaloff>move_icon.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_enc_cp_to">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>373</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgba(255, 255, 255, 255)
+}</string>
+    </property>
+    <property name="text">
+     <string>Keys pasted!</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="title_bar" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>980</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="lbl_name">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>1</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(148, 150, 162);
+}</string>
+    </property>
+    <property name="text">
+     <string>RSA Cipher</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_icon">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>8</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(148, 150, 162);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>icon.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="btnwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>0</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="btn_cls">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>0</y>
+      <width>35</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(50, 0, 0);
+	color: rgb(206, 214, 196);
+	border: 1px solid rgb(40, 0, 0);
+	border-top-right-radius: 8px;/**/
+}
+
+QPushButton:hover {
+	background-color: rgb(150, 0, 0);
+	border:1px solid rgb(140, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(120, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_min">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>35</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(50, 0, 0);
+	color: rgb(206, 214, 196);
+	border: 1px solid rgb(40, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(150, 0, 0);
+	border:1px solid rgb(140, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(120, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>OTInput</tabstop>
+  <tabstop>CTInput</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
